@@ -1,0 +1,19 @@
+ClrHome
+Output(1,2,"SCORES REPORT")
+Output(2,4,"PUZZLE D")
+Output(2,13,|LPUZZ(1)
+Output(3,3,"PUZZLE E")
+Output(3,13,|LPUZZ(2)
+Output(4,4,"PUZZLE F")
+Output(4,13,|LPUZZ(3)
+Output(5,3,"PUZZLE G"
+Output(5,13,|LPUZZ(4)
+Output(6,4,"PUZZLE H")
+Output(6,13,|LPUZZ(5)
+Output(7,3,"PUZZLE J")
+Output(7,13,|LPUZZ(6)
+Output(8,2,"TOTAL")
+Output(8,13,sum(|LPUZZ)
+Pause 
+ClrHome
+Return

@@ -1,0 +1,24 @@
+ClrHome
+Output(2,6,"THE")
+Output(3,2,"SHIFTER PUZZLE")
+Output(7,5,"BY EVAN CHIU")
+Pause 
+ClrHome
+Lbl 0
+Menu("     PUZZLE     ","PREMADE TESTS",A,"RANDOM PUZZLE",B,"SCORES",C,"QUIT",theta)
+Lbl A
+prgmPRESHUF
+Goto 0
+
+Lbl B
+prgmSHUFFLE
+Goto 0
+
+Lbl C
+prgmSCORES
+Goto 0
+
+Lbl theta
+ClrHome
+Output(3,4,"THANK YOU"
+Output(4,3,"FOR PLAYING")

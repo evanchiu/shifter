@@ -1,0 +1,113 @@
+Lbl 1
+Output(1,1,M)
+
+If [C]=[B]
+Then
+	Output(1,6,"YOU WIN!")
+	If L=1 and M<|LPUZZ(1)
+	M->|LPUZZ(1)
+	
+	If L=2 and M<|LPUZZ(2)
+	M->|LPUZZ(2)
+	
+	If L=3 and M<|LPUZZ(3)
+	M->|LPUZZ(3)
+	
+	If L=4 and M<|LPUZZ(4)
+	M->|LPUZZ(4)
+	
+	If L=5 and M<|LPUZZ(5)
+	M->|LPUZZ(5)
+	
+	If L=6 and M<|LPUZZ(6)
+	M->|LPUZZ(6)
+	Stop
+End
+
+getKey->K
+
+If K>49
+Stop
+
+If K=25 or K=42
+Then
+	A-1->A
+	If A=0
+	Then
+		1->A
+		M+5->M
+		Goto 1
+	End
+	2A->I
+	(4(B-1))+2->J
+	
+	[B](A,B)->C
+	C->[B](A+1,B)
+	0->[B](A,B)
+	1+M->M
+	Output(I,J,"  "
+	Output(I+2,J,"  "
+	Output(I+2,J,[B](A+1,B)
+End
+
+
+If K=34 or K=22
+Then
+	A+1->A
+	If A=5
+	Then
+		4->A
+		M+5->M
+		Goto 1
+	End
+	
+	
+	2A->I
+	(4(B-1))+2->J
+	[B](A,B)->[B](A-1,B)
+	0->[B](A,B)
+	Output(I,J,"  "
+	Output(I-2,J,"  "
+	Output(I-2,J,[B](A-1,B)
+	1+M->M
+End
+
+If K=24 or K=33
+Then
+	B-1->B
+	If B=0
+	Then
+		1->B
+		M+1->M
+		Goto 1
+	End
+	2A->I
+	(4(B-1))+2->J
+	[B](A,B)->[B](A,B+1)
+	0->[B](A,B)
+	Output(I,J,"  ")
+	Output(I,J+4,"  ")
+	Output(I,J+4,[B](A,B+1)
+	1+M->M
+End
+
+If K=26 or K=31
+Then
+	B+1->B
+	If B=5
+	Then
+		4->B
+		M+5->M
+		Goto 1
+	End
+	
+	2A->I
+	(4(B-1))+2->J
+	[B](A,B)->[B](A,B-1)
+	0->[B](A,B)
+	Output(I,J,"  "
+	Output(I,J-4,"  "
+	Output(I,J-4,[B](A,B-1)
+	1+M->M
+End
+Goto 1

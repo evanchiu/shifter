@@ -1,0 +1,81 @@
+0->L
+
+ClrHome
+Disp "HOW MANY"
+Input "SHUFFELS? ",S
+0->D
+[C]->[B]
+4->A
+4->B
+ClrHome
+Output(1,1,"SHUFFELING..."
+Lbl 1
+Output(1,14,S-D
+If S-D=99
+Output(1,16," "
+If S-D=9
+Output(1,15," "
+randInt(1,4)->K
+
+If D=S
+prgmPFORMAT
+
+If K=1
+Then
+	A-1->A
+	If A=0
+	Then
+		1->A
+		Goto 1
+	End
+	[B](A,B)->C
+	C->[B](A+1,B)
+	0->[B](A,B)
+End
+
+
+If K=2
+Then
+	A+1->A
+	
+	If A=5
+	Then
+		4->A
+		Goto 1
+	End
+	
+	[B](A,B)->[B](A-1,B)
+	0->[B](A,B)
+End
+
+If K=3
+Then
+	B-1->B
+	
+	If B=0
+	Then
+		1->B
+		Goto 1
+		
+	End
+	[B](A,B)->[B](A,B+1)
+	0->[B](A,B)
+End
+
+
+If K=4
+Then
+	B+1->B
+	
+	If B=5
+	Then
+		4->B
+		Goto 1
+	End
+	
+	[B](A,B)->[B](A,B-1)
+	0->[B](A,B)
+End
+
+D+1->D
+Goto 1
